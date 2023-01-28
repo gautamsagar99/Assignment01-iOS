@@ -82,6 +82,7 @@ y = Int(x)
 // use this equation of hypotenuse y = -(4/3)x + 4 to solve
 // sample test cases(1,-3),(0,0),(5,9),(1,2)
 
+
 var x1:Double = 1
 var y1:Double = 2
 var lowX = 3

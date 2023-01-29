@@ -149,7 +149,30 @@ print(minVal)
 //❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 
 
-// print("-----------------------------------")
+print("-----------------------------------")
+
+var temp1:Int = 0
+var temp2:Int = 0
+var n:Int = 17
+
+for temp1 in 0...n {
+    for temp2 in 0...n {
+
+            if (temp1 == 0 || temp2 == 0 || temp1 == temp2 || temp1 == n
+                            || temp2 == n  || temp1 + temp2 == n )
+            {
+                print("❄️", terminator:"")
+            }
+            else{
+                print("🎅",terminator: "");
+            }
+          
+        }
+        print("",terminator: "\n")
+    
+    
+    }
+
 
 //**************** END OF QUESTION 4 ****************
  
@@ -157,10 +180,13 @@ print(minVal)
 
 // Using Strings
 // 5.a) Replace the character "a" in original string with "@" and print the new string.
-// var original = "This string contains a very few a's."
+var original = "This string contains a very few a's."
+
+//original.insert(contentsOf: "@", at: original.index(before: original.endIndex))
 
 
-// print("-----------------------------------")
+print(original)
+ print("-----------------------------------")
 
 // 5.b) Declare 2 strings str1 and str2 as "go, bearcats!" and "GO, BEARCATS!", respectively and compare them.
 // If the 2 strings are equal, print str1 and str2 are equal, else str1 and str2 are not equal.

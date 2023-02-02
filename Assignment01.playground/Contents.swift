@@ -56,6 +56,8 @@ var x = 53.5
 var y = 40
 //y = x
 
+// x is of Double type and y is of Int type so we get compilation error. for resloving this error we need to do type casting on x into Int so that y can hold Int value.
+
 // 2.b) Fix the error in the question 2.a
 
 y = Int(x)

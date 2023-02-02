@@ -22,13 +22,15 @@ let maxHeight:  Double = 180.93
 
 print("Your max height is \(maxHeight) cm.")
 
-print("-----------------------------------")
+print("-------------------------------------")
  
 // 1.d) Assign 8,400,428,917 to a variable largeInt and print it. Use the Swift's ability to write large numbers so that they are easy to be read. Refer to Tuples worksheet (problem 4).
 
 let number: Int64 = 8_400_428_917
 
-print("-----------------------------------")
+print(number)
+
+print("-------------------------------------")
  
 // 1.e) Write Swift code to print the below text in one single print statement.
             /*
@@ -36,15 +38,13 @@ print("-----------------------------------")
                 Welcome to Mobile Computing - iOS Spring23..!
             */
 
-print(
-"""
-Hello, All
-Welcome to Mobile Computing - iOS Spring23..!
-
-"""
+print("""
+      Hello, All
+      Welcome to Mobile Computing - iOS Spring23..!
+    """
 )
 
-print("-----------------------------------")
+print("-------------------------------------")
  
 //**************** END OF QUESTION 1 ****************
  
@@ -90,16 +90,16 @@ var lowY = 0
 var highX = 0
 var highY = 4
 
-print("-----------------------------------")
+//print("-----------------------------------")
 
 var res:Double
 
 res = -(4/3)*x1 + 4
 
-print(floor(res))
-print(y1)
+//print(floor(res))
+//print(y1)
 
-if (y1 <= res) {
+if (res>=y1) {
     print("inside")
 }else{
     print("outside")
@@ -114,13 +114,13 @@ if (y1 <= res) {
 // Using loops
 // 4.a) Calculate the minimim value of x for which 8ˣ>4000000000 and print with a message.
 
-print("-----------------------------------")
-var minVal:Double = 1
+print("-------------------------------------")
+var minVal:Int = 1
 repeat {
     minVal += 1
 }while pow(8,minVal) < 4_00_00_00_000
 
-print(minVal)
+print("Min value of x is ",minVal)
 
 // 4.b) Let's say there is an n x n grid. We want to connect the diagonals of the grid
 // such that when we print the grid it prints a cross pattern like the format shown below.
@@ -149,7 +149,7 @@ print(minVal)
 //❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 
 
-print("-----------------------------------")
+print("-------------------------------------")
 
 var temp1:Int = 0
 var temp2:Int = 0
@@ -172,7 +172,7 @@ for temp1 in 0...n {
     
     
     }
-
+print("-------------------------------------")
 
 //**************** END OF QUESTION 4 ****************
  
@@ -180,19 +180,34 @@ for temp1 in 0...n {
 
 // Using Strings
 // 5.a) Replace the character "a" in original string with "@" and print the new string.
+
 var original = "This string contains a very few a's."
 
 //original.insert(contentsOf: "@", at: original.index(before: original.endIndex))
+//let replaced = String(aString.map {
+//    $0 == " " ? "+" : $0
+//})
 
 
-print(original)
- print("-----------------------------------")
+var newstring:String = original.replacingOccurrences(of: "a", with: "@")
+
+
+print(newstring)
+
+print("-------------------------------------")
 
 // 5.b) Declare 2 strings str1 and str2 as "go, bearcats!" and "GO, BEARCATS!", respectively and compare them.
 // If the 2 strings are equal, print str1 and str2 are equal, else str1 and str2 are not equal.
 
+var str1:String = "go, bearcats!"
+var str2:String = "GO, BEARCATS!"
 
-// print("-----------------------------------")
+if str1 == str2{
+    print("str1 and str2 are equal")
+}else{
+    print("str1 and str2 are not equal")
+}
+print("-------------------------------------")
 
 
 
@@ -203,12 +218,31 @@ print(original)
 // (i.e. matching characters :- p,h,i,l,e)
 // Hint : You may use Set() to get the unique characters in a string.
 
-// print("-----------------------------------")
+var s1:String = "philadelphia"
+var s2:String = "phillies"
+var resString:String = ""
+
+for i in Set(s2){
+    for  j  in Set(s1){
+        if i == j{
+            resString += String(i)
+            break
+        }
+    }
+    
+}
+print(resString.count)
+
+print("-------------------------------------")
 
 
 
 // 5.d) Write Swift code to trim leading and trailing emoji 🔥 character in a given string.
-// var myString1 = "🔥🔥🔥🔥Bearcats🔥🔥🔥🔥🔥🔥🔥"
+var myString1 = "🔥🔥🔥🔥Bearcats🔥🔥🔥🔥🔥🔥🔥"
 // expected output is "Bearcats"
+
+print(myString1.filter{$0 != "🔥"})
+//var replacedString:String = myString1.replacingOccurrences(of: "🔥", with: "")
+//print(replacedString)
 
 //**************** END OF QUESTION 5 ****************
